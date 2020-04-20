@@ -1,13 +1,15 @@
 import React from 'react';
 import './App.css';
 import TopMenu from './containers/top-menu/top-menu'
-import Category from './containers/category/category'
+import Categories from './containers/categories/categories'
+import Products from './containers/products/products'
 
 function App() {
   return (
     <div className="App">
       <TopMenu/>
-      <Category/>
+      <Categories/>
+      <Products/>
     </div>
   );
 }

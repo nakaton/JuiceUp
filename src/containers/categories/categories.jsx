@@ -1,15 +1,15 @@
 import React, { Component } from "react";
 import CategoryItem from "../../components/category-item/category-item";
-import "./category.css";
+import "./categories.css";
 
-import avocado from "../../assets/avocado.svg";
-import mango from "../../assets/mango.svg";
-import grapes from "../../assets/grapes.svg";
-import apple from "../../assets/apple.svg";
-import orange from "../../assets/orange.svg";
-import pear from "../../assets/pear.svg";
+import avocado from "../../assets/category/avocado.svg";
+import mango from "../../assets/category/mango.svg";
+import grapes from "../../assets/category/grapes.svg";
+import apple from "../../assets/category/apple.svg";
+import orange from "../../assets/category/orange.svg";
+import pear from "../../assets/category/pear.svg";
 
-class Category extends Component {
+class Categories extends Component {
   state = {
     categoryItems: [
       {
@@ -46,7 +46,7 @@ class Category extends Component {
   };
   render() {
     return (
-      <div className="CategoryContainer">
+      <div className="CategoriesContainer">
         {this.state.categoryItems.map(categoryItem => (
         <CategoryItem
           key={categoryItem.name}
@@ -60,4 +60,4 @@ class Category extends Component {
   }
 }
 
-export default Category;
+export default Categories;

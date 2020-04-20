@@ -1,0 +1,26 @@
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css?family=Kanit&display=swap');
+
+.ProductsContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    background-color: white;
+}
+
+.TopTitle{
+    align-self: start;
+    font-family: Kanit;
+    font-size: x-large;
+    margin: 0 0.5rem;
+}
+
+.TopTitle p{
+    margin-bottom: 0;
+}
+
+.Products{
+    display: flex;
+    justify-content: flex-start;
+    overflow-x: scroll;
+}
