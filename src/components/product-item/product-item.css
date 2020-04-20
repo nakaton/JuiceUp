@@ -27,7 +27,7 @@
 }
 
 .productItem .productImg{
-    width: 12em;
+    width: 5em;
     height: 12em;
 }
 
@@ -39,7 +39,7 @@
     padding-top: 1em;
     font-family: Kanit;
     font-size: large;
-    color: gray;
+    color: white;
 }
 
 .productItemInfo-Left{
