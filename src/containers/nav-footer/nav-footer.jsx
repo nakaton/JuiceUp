@@ -50,6 +50,7 @@ class NavFooter extends Component {
             title={navItem.title}
             selected={navItem.selected}
             focus={navItem.focus}
+            onPress={() => this.props.history.replace(navItem.path)}
           />
         ))}
       </div>

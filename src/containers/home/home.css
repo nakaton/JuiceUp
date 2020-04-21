@@ -1,0 +1,22 @@
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css?family=Playball&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+.Home {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    background-color: white;
+    height: 100vh;
+  }
+
+.TopSection{
+    background-color: #f3f3f3;
+}
+
+::-webkit-scrollbar {
+    display: none;
+  }
