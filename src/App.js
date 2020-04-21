@@ -3,13 +3,17 @@ import './App.css';
 import TopMenu from './containers/top-menu/top-menu'
 import Categories from './containers/categories/categories'
 import Products from './containers/products/products'
+import NavFooter from './containers/nav-footer/nav-footer';
 
 function App() {
   return (
     <div className="App">
-      <TopMenu/>
-      <Categories/>
+      <div className="TopSection">
+        <TopMenu/>
+        <Categories/>
+      </div>
       <Products/>
+      <NavFooter className="NavPosition"/>
     </div>
   );
 }

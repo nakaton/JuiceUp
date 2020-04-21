@@ -10,9 +10,12 @@ import orange from "../../assets/category/orange.svg";
 import pear from "../../assets/category/pear.svg";
 
 class Categories extends Component {
+  // name = "avocado";
   state = {
     categoryItems: [
       {
+        // This is another way to bring in static img in React
+        // imgUrl: require(`../../assets/category/${this.name}.svg`),
         imgUrl: avocado,
         name: "Avocado",
         color: "#E0F0E4",

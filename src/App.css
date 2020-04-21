@@ -6,6 +6,17 @@
 }
 
 .App {
+  display: flex;
+  flex-direction: column;
   text-align: center;
-    background-color: #F3F3F3;
+  background-color: white;
+  height: 100vh;
+}
+
+.TopSection{
+  background-color: #f3f3f3;
+}
+
+::-webkit-scrollbar {
+  display: none;
 }

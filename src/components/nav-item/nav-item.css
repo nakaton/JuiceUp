@@ -1,0 +1,29 @@
+.material-icons.activeColor {
+    color: #F69BA3;
+}
+
+.material-icons.inActiveColor {
+    /* color: #C9CCCF; */
+    color: #BAB7B7;
+}
+
+.material-icons.focusColor {
+    color: #F58D95;
+    align-self: start;
+
+}
+
+.material-icons.md-32 {
+    font-size: 30px;
+}
+
+.material-icons.md-40 {
+    font-size: 45px;
+}
+
+.navItem {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
