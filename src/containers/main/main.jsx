@@ -1,9 +1,10 @@
 import React, {Component} from 'react'
-import {Switch, Route, Redirect} from 'react-router-dom'
+import {Switch, Route} from 'react-router-dom'
 import './main.css';
 
 import Home from '../home/home'
 import Cart from '../cart/cart'
+import NavFooter from '../nav-footer/nav-footer';
 
 import category_avocado from "../../assets/category/avocado.svg";
 import category_mango from "../../assets/category/mango.svg";
@@ -103,12 +104,14 @@ export default class Main extends Component{
           badge: '',
           icon: "home",
           // title: 'Home',
+          path: '/',
           selected: true
         },
         {
           badge: '',
           icon: "shopping_cart",
           // title: 'Cart',
+          path: '/cart',
           selected: false
         },
         {
@@ -116,23 +119,35 @@ export default class Main extends Component{
           icon: "add_circle",
           // title: 'Add',
           selected: false,
+          path: '/add',
           focus: true
         },
         {
           badge: '',
           icon: "signal_cellular_alt",
           // title: 'Trade',
+          path: '/trade',
           selected: false
         },
         {
           badge: '',
           icon: "person_outline",
           // title: 'Profile',
+          path: '/profile',
           selected: false
         },
     ];
 
     render(){
+
+        const {navItems} = this;
+        const path = this.props.location.pathname; // Get reqeust path
+        let lastNav = navItems.find(navItem=> navItem.selected===true); // Find last selected NavItem
+        lastNav.selected = false;
+        let currentNav = navItems.find(navItem=> navItem.path===path); // Find current selected NavItem
+        currentNav.selected = true;
+
+
         return (
             <div className="Main">
                 <Switch>
@@ -140,9 +155,10 @@ export default class Main extends Component{
                         <Cart/>
                     </Route>
                     <Route path="/">
-                        <Home categoryItems={this.categoryItems} productItems={this.productItems} navItems={this.navItems}/>
+                        <Home categoryItems={this.categoryItems} productItems={this.productItems}/>
                     </Route>
                 </Switch>
+                <NavFooter navItems={this.navItems}/>
             </div>
           );
     }

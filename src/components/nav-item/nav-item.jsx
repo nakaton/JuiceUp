@@ -10,10 +10,12 @@ export default function NavItem(props) {
     iconStyle = props.focus ? "material-icons focusColor md-40" : iconStyle;
 
     return (
-        <div className="navItem">
-            <span>{props.badge}</span>
-            <span className={iconStyle}>{props.icon}</span>
-            {/* <p>{props.title}</p> */}
-        </div>
+        <a href={props.path} onClick={props.onPress}>
+            <div className="navItem">
+                <span>{props.badge}</span>
+                <span className={iconStyle}>{props.icon}</span>
+                {/* <p>{props.title}</p> */}
+            </div>
+        </a>
     );
 }

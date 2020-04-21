@@ -20,7 +20,9 @@ export default function ProductItem(props){
                     <p className="productItemPrice">$ {props.productItemPrice}</p>
                 </div>
                 <div className="productItemInfo-Right">
-                    <img src={shoppingCart} alt="shopping cart" className="cartImg"/>
+                    <a href="/" onClick={props.onPress}>
+                        <img src={shoppingCart} alt="shopping cart" className="cartImg"/>
+                    </a>
                 </div>
             </div>
         </div>

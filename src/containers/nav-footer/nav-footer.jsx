@@ -1,5 +1,7 @@
 import React, { Component } from "react";
 import PropTypes from 'prop-types';
+import {withRouter} from 'react-router-dom'
+
 import NavItem from "../../components/nav-item/nav-item";
 import "./nav-footer.css";
 
@@ -28,4 +30,5 @@ class NavFooter extends Component {
     }
 }
 
-export default NavFooter;
+// User withRouter to render a component with Router api: history/location/math
+export default withRouter(NavFooter);
