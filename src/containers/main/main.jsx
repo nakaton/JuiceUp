@@ -180,7 +180,7 @@ export default class Main extends Component {
           imgUrl: avocado,
           name: "Avocado Juice",
           color: "#ACDAB4",
-          price: 8.65,
+          price: 8.5,
           desc: "Popular juice with sparkle",
           qty: 1,
         },
@@ -193,6 +193,7 @@ export default class Main extends Component {
           qty: 1,
         },
       ],
+      total: 49.65, //The summary in the cart
     };
   }
 
@@ -202,7 +203,14 @@ export default class Main extends Component {
     let cartItems = this.state.cartItems;
     let currentCartItem = cartItems.find((cartItem) => cartItem.name === e); // Find current cartItem
     currentCartItem.qty += 1;
+
+    //Calculate total price
+    let total = this.state.total;
+    total += currentCartItem.price;
+
+    //Update state
     this.setState({ cartItems: cartItems });
+    this.setState({ total: total });
     console.log("add qty finish!");
   }
 
@@ -212,11 +220,20 @@ export default class Main extends Component {
     let cartItems = this.state.cartItems;
     let currentCartItem = cartItems.find((cartItem) => cartItem.name === e); // Find current cartItem
     currentCartItem.qty -= 1;
-    
-    if(currentCartItem.qty <= 0){
-      currentCartItem.qty = 0
+
+    //Calculate total price
+    let total = this.state.total;
+
+    if (currentCartItem.qty < 0) {
+      currentCartItem.qty = 0;
+    } else {
+      total -= currentCartItem.price;
     }
+
+    //Update state
     this.setState({ cartItems: cartItems });
+    this.setState({ total: total });
+
     console.log("subtract qty finish!");
   }
 
@@ -236,6 +253,7 @@ export default class Main extends Component {
               cartItems={this.state.cartItems}
               addQty={this.addQty}
               subtractQty={this.subtractQty}
+              total={this.state.total}
             />
           </Route>
           <Route path="/">

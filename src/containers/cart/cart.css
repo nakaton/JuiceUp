@@ -9,5 +9,33 @@
     background-color: white;
     border-top-left-radius: 1em;
     border-top-right-radius: 1em;
-    padding: 3.8em 0em 4.5em 0em;
+    padding: 3.8em 0em 5.5em 0em;
+}
+
+.Summary{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-family: "Kanit";
+    font-size: large;
+    background-color: #FA818A;
+    border-radius: 0.5em;
+    width: 60%;
+    color: white;
+    margin: 0em 0em 3.2em 38%;
+    margin-top: auto;
+    /* Fixed Summary Bar to the bottom of screen */
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 9999;
+}
+
+.Summary span{
+    margin-left: 0.5em;
+}
+
+.Summary p{
+    margin: 0 0.5em 0 0 ;
 }

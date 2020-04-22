@@ -26,6 +26,10 @@ export default class Cart extends Component {
             />
           ))}
         </div>
+        <div className="Summary">
+          <span>Total: ${this.props.total}</span>
+          <p>Pay</p>
+        </div>
       </div>
     );
   }
