@@ -1,10 +1,8 @@
-.CategoriesContainer{
+.categoriesContainer {
     display: flex;
     justify-content: flex-start;
     overflow-x: scroll;
     border-top-left-radius: 1em;
     border-top-right-radius: 1em;
     background-color: white;
-    /* padding-bottom: 2em; */
-    /* height: 100%; */
 }

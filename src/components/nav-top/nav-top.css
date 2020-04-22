@@ -1,4 +1,4 @@
-.NavTop{
+.navTop {
     display: flex;
     flex-direction: row;
     /* justify-content: center; */
@@ -13,14 +13,14 @@
     z-index: 9999;
 }
 
-.NavTop .material-icons{
+.navTop .material-icons {
     justify-self: start;
     margin-left: 0.5em;
     border-radius: 0.3em;
     border: 2px solid #F5F3F3
 }
 
-.NavTop .title{
+.navTop .title {
     font-size: large;
     justify-self: center;
     padding-right: 0.5em;

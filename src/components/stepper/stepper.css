@@ -1,4 +1,4 @@
-.Stepper{
+.stepper {
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -6,12 +6,12 @@
     padding: 0.5em 0em;
 }
 
-.Stepper .material-icons{
+.stepper .material-icons {
     font-size: xx-large;
     color: #757887;
 }
 
-.Stepper .productItemQty{
+.stepper .productItemQty {
     margin: 0;
     padding: 0 0.5em;
     font-size: large;

@@ -205,10 +205,10 @@ export default class Main extends Component {
 
   //Press Cart in Most Popular Product
   onPress = (productName) => {
-    console.log(productName);
     const popUpStyle = {
       display: "block",
     };
+
     this.setState({ popUpStyle: popUpStyle });
     const intervalId = setInterval(this.dispear, 3000);
     this.setState({ intervalId: intervalId });
@@ -235,7 +235,7 @@ export default class Main extends Component {
         desc: "Popular juice with sparkle",
         qty: 1,
       };
-      cartItems.push(currentCartItem)
+      cartItems.push(currentCartItem);
     }
 
     //Calculate total price
@@ -288,7 +288,7 @@ export default class Main extends Component {
       currentCartItem.qty = 0;
       cartItems = cartItems.filter((cartItem) => cartItem.name !== e); // Find current cartItem
     }
-    
+
     //Update state
     this.setState({ cartItems: cartItems });
     this.setState({ total: total });
@@ -305,7 +305,7 @@ export default class Main extends Component {
     currentNav.selected = true;
 
     return (
-      <div className="Main">
+      <div className="main">
         <Switch>
           <Route path="/cart">
             <Cart

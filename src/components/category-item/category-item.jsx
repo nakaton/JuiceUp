@@ -1,19 +1,19 @@
-import React from 'react'
-import './category-item.css'
+import React from "react";
+import "./category-item.css";
 
-export default function CategoryItem(props){
+export default function CategoryItem(props) {
+  //Setup the background accordingly
+  const divStyle = {
+    background: props.bgColor,
+    border: `1.5px solid ${props.bgColor}`,
+  };
 
-    const divStyle = {
-        background: props.bgColor,
-        border: `1.5px solid ${props.bgColor}`
-    };
-
-    return (
-        <div className="categoryItemContainer">
-            <div className="categoryItem" style={divStyle}>
-                <img src={props.imgUrl} alt="category item" className="categoryImg"/>
-            </div>
-            <p className="categoryItemName">{props.categoryItemName}</p>
-        </div>
-    );
+  return (
+    <div className="categoryItemContainer">
+      <div className="categoryItem" style={divStyle}>
+        <img src={props.imgUrl} alt="category item" className="categoryImg" />
+      </div>
+      <p className="categoryItemName">{props.categoryItemName}</p>
+    </div>
+  );
 }

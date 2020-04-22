@@ -4,14 +4,13 @@ import NavTop from "../../components/nav-top/nav-top";
 import CartItem from "../../components/cart-item/cart-item";
 
 export default class Cart extends Component {
-
   render() {
     const cartItems = this.props.cartItems;
     return (
-      <div className="Cart">
+      <div className="cart">
         <NavTop />
 
-        <div className="CartItems">
+        <div className="cartItems">
           {cartItems.map((cartItem) => (
             <CartItem
               key={cartItem.name}
@@ -26,7 +25,7 @@ export default class Cart extends Component {
             />
           ))}
         </div>
-        <div className="Summary">
+        <div className="summary">
           <span>Total: ${this.props.total}</span>
           <p>PAY</p>
         </div>

@@ -1,7 +1,7 @@
 /* Google Fonts */
 @import url('https://fonts.googleapis.com/css?family=Kanit&display=swap');
 
-.ProductsContainer{
+.productsContainer{
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -9,7 +9,7 @@
     padding-bottom: 2em;
 }
 
-.TopTitle{
+.topTitle{
     align-self: start;
     font-family: Kanit;
     font-size: x-large;
@@ -17,11 +17,11 @@
     color: #3B4947;
 }
 
-.TopTitle p{
+.topTitle p{
     margin-bottom: 0;
 }
 
-.Products{
+.products{
     display: flex;
     justify-content: flex-start;
     overflow-x: scroll;
