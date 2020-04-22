@@ -25,6 +25,8 @@ export default class Main extends Component {
     super(props);
     this.addQty = this.addQty.bind(this);
     this.subtractQty = this.subtractQty.bind(this);
+    this.onPress = this.onPress.bind(this);
+    this.dispear = this.dispear.bind(this);
     this.state = {
       // Data for Categories
       categoryItems: [
@@ -92,7 +94,7 @@ export default class Main extends Component {
           imgUrl: avocado,
           name: "Avocado Juice",
           color: "#ACDAB4",
-          price: 8.65,
+          price: 8.5,
         },
         {
           imgUrl: orange,
@@ -152,50 +154,107 @@ export default class Main extends Component {
           desc: "Popular juice with sparkle",
           qty: 1,
         },
-        {
-          imgUrl: pear,
-          name: "Pear Juice",
-          color: "#AFCD61",
-          price: 9.5,
-          desc: "Popular juice with sparkle",
-          qty: 2,
-        },
-        {
-          imgUrl: grapes,
-          name: "Grapes Juice",
-          color: "#D5AECD",
-          price: 2.5,
-          desc: "Popular juice with sparkle",
-          qty: 1,
-        },
-        {
-          imgUrl: mango,
-          name: "Mango Juice",
-          color: "#FEE0B9",
-          price: 10.5,
-          desc: "Popular juice with sparkle",
-          qty: 1,
-        },
-        {
-          imgUrl: avocado,
-          name: "Avocado Juice",
-          color: "#ACDAB4",
-          price: 8.5,
-          desc: "Popular juice with sparkle",
-          qty: 1,
-        },
-        {
-          imgUrl: orange,
-          name: "Orange Juice",
-          color: "#FCD855",
-          price: 5.5,
-          desc: "Popular juice with sparkle",
-          qty: 1,
-        },
+        // {
+        //   imgUrl: pear,
+        //   name: "Pear Juice",
+        //   color: "#AFCD61",
+        //   price: 9.5,
+        //   desc: "Popular juice with sparkle",
+        //   qty: 2,
+        // },
+        // {
+        //   imgUrl: grapes,
+        //   name: "Grapes Juice",
+        //   color: "#D5AECD",
+        //   price: 2.5,
+        //   desc: "Popular juice with sparkle",
+        //   qty: 1,
+        // },
+        // {
+        //   imgUrl: mango,
+        //   name: "Mango Juice",
+        //   color: "#FEE0B9",
+        //   price: 10.5,
+        //   desc: "Popular juice with sparkle",
+        //   qty: 1,
+        // },
+        // {
+        //   imgUrl: avocado,
+        //   name: "Avocado Juice",
+        //   color: "#ACDAB4",
+        //   price: 8.5,
+        //   desc: "Popular juice with sparkle",
+        //   qty: 1,
+        // },
+        // {
+        //   imgUrl: orange,
+        //   name: "Orange Juice",
+        //   color: "#FCD855",
+        //   price: 5.5,
+        //   desc: "Popular juice with sparkle",
+        //   qty: 1,
+        // },
       ],
-      total: 49.65, //The summary in the cart
+      total: 3.5, //The summary in the cart
+      popUpStyle: {
+        display: "none",
+      },
+      intervalId: "",
     };
   }
+
+  //Press Cart in Most Popular Product
+  onPress = (productName) => {
+    console.log(productName);
+    const popUpStyle = {
+      display: "block",
+    };
+    this.setState({ popUpStyle: popUpStyle });
+    const intervalId = setInterval(this.dispear, 3000);
+    this.setState({ intervalId: intervalId });
+
+    let productItems = this.state.productItems;
+    let currentProductItem = productItems.find(
+      (productItem) => productItem.name === productName
+    ); // Find current productItem
+
+    let cartItems = this.state.cartItems;
+    let currentCartItem = cartItems.find(
+      (cartItem) => cartItem.name === productName
+    ); // Find current cartItem
+
+    //Add to Cart
+    if (currentCartItem !== undefined) {
+      currentCartItem.qty += 1;
+    } else {
+      currentCartItem = {
+        imgUrl: currentProductItem.imgUrl,
+        name: productName,
+        color: currentProductItem.color,
+        price: currentProductItem.price,
+        desc: "Popular juice with sparkle",
+        qty: 1,
+      };
+      cartItems.push(currentCartItem)
+    }
+
+    //Calculate total price
+    let total = this.state.total;
+    total += currentCartItem.price;
+
+    //Update state
+    this.setState({ cartItems: cartItems });
+    this.setState({ total: total });
+  };
+
+  //Control popUp to disappear after show up 3s
+  dispear = () => {
+    const popUpStyle = {
+      display: "none",
+    };
+    this.setState({ popUpStyle: popUpStyle });
+    clearInterval(this.state.intervalId);
+  };
 
   // Add order qty in Cart
   addQty(e) {
@@ -223,13 +282,13 @@ export default class Main extends Component {
 
     //Calculate total price
     let total = this.state.total;
+    total -= currentCartItem.price;
 
-    if (currentCartItem.qty < 0) {
+    if (currentCartItem.qty <= 0) {
       currentCartItem.qty = 0;
-    } else {
-      total -= currentCartItem.price;
+      cartItems = cartItems.filter((cartItem) => cartItem.name !== e); // Find current cartItem
     }
-
+    
     //Update state
     this.setState({ cartItems: cartItems });
     this.setState({ total: total });
@@ -260,6 +319,8 @@ export default class Main extends Component {
             <Home
               categoryItems={this.state.categoryItems}
               productItems={this.state.productItems}
+              onPress={this.onPress}
+              popUpStyle={this.state.popUpStyle}
             />
           </Route>
         </Switch>

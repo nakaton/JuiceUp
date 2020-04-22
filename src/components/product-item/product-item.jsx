@@ -19,7 +19,7 @@ export default function ProductItem(props){
                     <p className="productItemName">{props.productItemName}</p>
                     <p className="productItemPrice">$ {props.productItemPrice}</p>
                 </div>
-                <div className="productItemInfo-Right" role="button" onClick={props.onPress}>
+                <div className="productItemInfo-Right" role="button" onClick={() => props.onPress(props.productItemName)}>
                     <img src={shoppingCart} alt="shopping cart" className="cartImg"/>
                 </div>
             </div>
