@@ -3,11 +3,11 @@
 
 .Cart{
     font-family: "Kanit";
-    background-color: #f3f3f3;
 }
 
 .CartItems{
     background-color: white;
     border-top-left-radius: 1em;
     border-top-right-radius: 1em;
+    padding: 3.8em 0em 4.5em 0em;
 }

@@ -196,6 +196,7 @@ export default class Main extends Component {
     };
   }
 
+  // Add order qty in Cart
   addQty(e) {
     console.log("start to add qty!!");
     let cartItems = this.state.cartItems;
@@ -205,6 +206,7 @@ export default class Main extends Component {
     console.log("add qty finish!");
   }
 
+  // Subtract order qty in Cart
   subtractQty(e) {
     console.log("start to subtract qty!!");
     let cartItems = this.state.cartItems;

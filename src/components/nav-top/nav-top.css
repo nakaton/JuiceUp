@@ -4,6 +4,13 @@
     /* justify-content: center; */
     align-items: center;
     color: #3B4947;
+    background-color: #f3f3f3;
+    /* Fixed Navbar to the bottom of screen */
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    z-index: 9999;
 }
 
 .NavTop .material-icons{
