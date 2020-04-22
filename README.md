@@ -6,7 +6,7 @@
 ![Image description](./demo_image/IMG_7571.PNG){:height="50%" width="50%"}
 #### >> Home - 2
 ![Image description](./demo_image/IMG_7573.PNG = 250x250)
-<img src="./demo_image/IMG_7573.PNG" width="100" height="100">
+<img src="./demo_image/IMG_7573.PNG" width="400" >
 #### >> Cart - 1
 ![Image description](./demo_image/IMG_7574.PNG)
 
