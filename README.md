@@ -2,10 +2,10 @@
 
 ### Mobile demo-img:
 #### >> Home - 1
-![Image description](./demo_image/IMG_7571.PNG)
+![Image description](./demo_image/IMG_7571.PNG | width=100)
 
 #### >> Home - 2
-![Image description](./demo_image/IMG_7573.PNG)
+![Image description](./demo_image/IMG_7573.PNG = 250x250)
 
 #### >> Cart - 1
 ![Image description](./demo_image/IMG_7574.PNG)
