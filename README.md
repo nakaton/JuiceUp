@@ -1,16 +1,16 @@
 # React Web Apps inspired by Dribbble UI & more to come.
 
 ### Mobile demo-img:
-#### Home - 1
+#### >> Home - 1
 ![Image description](./demo_image/IMG_7571.PNG)
 
-#### Home - 2
+#### >> Home - 2
 ![Image description](./demo_image/IMG_7573.PNG)
 
-#### Cart - 1
+#### >> Cart - 1
 ![Image description](./demo_image/IMG_7574.PNG)
 
-#### Cart - 1
+#### >> Cart - 2
 ![Image description](./demo_image/IMG_7575.PNG)
 
 
