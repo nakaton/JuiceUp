@@ -2,16 +2,15 @@
 
 ### Mobile demo-img:
 #### >> Home - 1
-![Image description](./demo_image/IMG_7571.PNG | width=100)
-![Image description](./demo_image/IMG_7571.PNG){:height="50%" width="50%"}
+<img src="./demo_image/IMG_7571.PNG" width="60%" >
 #### >> Home - 2
-![Image description](./demo_image/IMG_7573.PNG = 250x250)
-<img src="./demo_image/IMG_7573.PNG" width="400" >
+<img src="./demo_image/IMG_7573.PNG" width="50%" >
 #### >> Cart - 1
-![Image description](./demo_image/IMG_7574.PNG)
+<img src="./demo_image/IMG_7574.PNG" width="70%" >
 
 #### >> Cart - 2
 ![Image description](./demo_image/IMG_7575.PNG)
+<img src="./demo_image/IMG_7575.PNG" width="50%" >
 
 
 
