@@ -25,6 +25,7 @@ class Products extends Component {
             imgUrl={productItem.imgUrl}
             productItemName={productItem.name}
             productItemPrice={productItem.price}
+            onPress={this.props.onPress}
           />
           ))}
         </div>

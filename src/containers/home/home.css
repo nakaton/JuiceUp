@@ -6,17 +6,86 @@
 }
 
 .Home {
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    background-color: white;
-    height: 100vh;
-  }
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  background-color: white;
+  height: 100vh;
+}
 
-.TopSection{
-    background-color: #f3f3f3;
+.TopSection {
+  background-color: #f3f3f3;
 }
 
 ::-webkit-scrollbar {
-    display: none;
+  display: none;
+}
+
+.popUp {
+  display: none;
+  font-family: "Kanit";
+  color: #3B4947;
+  opacity: 1;
+  background-color: #CDEAD6;
+  border: 1px solid #B9E3C5;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.5);
+  padding: 0.5em;
+  border-radius: 5px;
+  align-self: center;
+  position: relative;
+  bottom: 40%;
+  z-index: 1000;
+  transition: display 2s;
+}
+
+.fade-out {
+  animation: fadeOut ease 3s;
+  -webkit-animation: fadeOut ease 3s;
+  -moz-animation: fadeOut ease 3s;
+  -o-animation: fadeOut ease 3s;
+  -ms-animation: fadeOut ease 3s;
+}
+@keyframes fadeOut {
+  0% {
+    opacity:1;
   }
+  100% {
+    opacity:0;
+  }
+}
+
+@-moz-keyframes fadeOut {
+  0% {
+    opacity:1;
+  }
+  100% {
+    opacity:0;
+  }
+}
+
+@-webkit-keyframes fadeOut {
+  0% {
+    opacity:1;
+  }
+  100% {
+    opacity:0;
+  }
+}
+
+@-o-keyframes fadeOut {
+  0% {
+    opacity:1;
+  }
+  100% {
+    opacity:0;
+  }
+}
+
+@-ms-keyframes fadeOut {
+  0% {
+    opacity:1;
+  }
+  100% {
+    opacity:0;
+  }
+}
