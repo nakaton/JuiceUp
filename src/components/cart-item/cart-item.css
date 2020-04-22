@@ -1,0 +1,66 @@
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css?family=Kanit&display=swap');
+
+.cartItemContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    width: 100%;
+    height: auto;
+    border-radius: 1.5em;
+    padding-top: 1em;
+}
+
+.cartItemContainer .productItem {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 1em;
+    width: 50%;
+    height: auto;
+    padding: 20px;
+    margin-left: 1em;
+    margin-right: 1.5em;
+}
+
+.cartItemContainer .productItem .productImg{
+    width: 3.5em;
+    height: 8em;
+}
+
+.cartItemContainer .productItemInfo{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 0.5em 0em;
+    font-family: Kanit;
+    font-size: large;
+    color: #3B4947;
+}
+
+.cartItemContainer .productItemName {
+    margin-top: 1em;
+    margin-bottom: 0em;
+    font-size: large;
+    font-weight: bold;
+    align-self: start;
+}
+
+.cartItemContainer .productItemDesc {
+    font-size: small;
+    color: #BEC0C7 !important;
+    margin-top: 0;
+    margin-bottom: 0;
+    align-self: start;
+}
+
+.cartItemContainer .productItemPrice{
+    margin-top: 0.5em;
+    margin-bottom: 0;
+    align-self: start;
+    font-size: large;
+    align-self: start;
+}

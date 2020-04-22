@@ -1,0 +1,19 @@
+.Stepper{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-self: start;
+    padding: 0.5em 0em;
+}
+
+.Stepper .material-icons{
+    font-size: xx-large;
+    color: #757887;
+}
+
+.Stepper .productItemQty{
+    margin: 0;
+    padding: 0 0.5em;
+    font-size: large;
+    align-self: center;
+}

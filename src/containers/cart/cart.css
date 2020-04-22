@@ -1,0 +1,13 @@
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css?family=Kanit&display=swap');
+
+.Cart{
+    font-family: "Kanit";
+    background-color: #f3f3f3;
+}
+
+.CartItems{
+    background-color: white;
+    border-top-left-radius: 1em;
+    border-top-right-radius: 1em;
+}

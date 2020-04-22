@@ -1,0 +1,22 @@
+.NavTop{
+    display: flex;
+    flex-direction: row;
+    /* justify-content: center; */
+    align-items: center;
+    color: #3B4947;
+}
+
+.NavTop .material-icons{
+    justify-self: start;
+    margin-left: 0.5em;
+    border-radius: 0.3em;
+    border: 2px solid #F5F3F3
+}
+
+.NavTop .title{
+    font-size: large;
+    justify-self: center;
+    padding-right: 0.5em;
+    margin-left: auto;
+    margin-right: auto;
+}
