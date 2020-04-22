@@ -1,17 +1,18 @@
 # React Web Apps inspired by Dribbble UI & more to come.
 
 ### Mobile demo-img:
+
 #### >> Home - 1
-<img src="./demo_image/IMG_7571.PNG" width="60%" >
+<img src="./demo_image/IMG_7571.PNG" width="50%" >
+
 #### >> Home - 2
 <img src="./demo_image/IMG_7573.PNG" width="50%" >
+
 #### >> Cart - 1
-<img src="./demo_image/IMG_7574.PNG" width="70%" >
+<img src="./demo_image/IMG_7574.PNG" width="50%" >
 
 #### >> Cart - 2
-![Image description](./demo_image/IMG_7575.PNG)
 <img src="./demo_image/IMG_7575.PNG" width="50%" >
-
 
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
